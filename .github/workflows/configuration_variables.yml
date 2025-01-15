@@ -1,0 +1,17 @@
+name: Configuration Variable
+
+on: workflow_dispatch
+
+env:
+  DAY_OF_WEEK: Wednesday
+
+jobs:
+  greeting_job:
+    runs-on: ubuntu-latest
+    env:
+      Greeting: Hello
+    steps:
+      - name: "Say Hello Mike it's Wednesday"
+        run: echo "$Greeting $First_Name. Today is $DAY_OF_WEEK and project you will work on ${{vars.PROJECT_ID}}!"
+        env:
+          First_Name: Mike
