@@ -1,21 +1,18 @@
-name: Testing workflow variables
+name: Greeting on variable day
 
 on:
   workflow_dispatch
 
 env:
-  cloud: google-cloud
+  DAY_OF_WEEK: Monday
 
 jobs:
-    # The type of runner that the job will run on
-    greeting_job:
+  greeting_job:
     runs-on: ubuntu-latest
-    env: 
-    Greeting: Hello, I am still testing
-    Steps:
-      name: "Testing the variables on Wednesday"
-      run: echo "$Greeting $First_name code in $cloud"
-      env:
-        First_name: Mike
-
-    
+    env:
+      Greeting: Hello
+    steps:
+      - name: "Say Hello Mona it's Monday"
+        run: echo "$Greeting $First_Name. Today is $DAY_OF_WEEK!"
+        env:
+          First_Name: Mona
