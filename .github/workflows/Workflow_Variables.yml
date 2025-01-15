@@ -9,7 +9,7 @@ env:
 jobs:
   greeting_job:
   runs-on: ubuntu-latest
-  env:
+  env: 
     Greeting: Hello, I am still testing
     Steps:
       name: "Testing the variables on Wednesday"
