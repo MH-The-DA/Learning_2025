@@ -7,14 +7,15 @@ env:
   cloud: google-cloud
 
 jobs:
-  greeting_job:
-  runs-on: ubuntu-latest
-  env: 
+    # The type of runner that the job will run on
+    greeting_job:
+    runs-on: ubuntu-latest
+    env: 
     Greeting: Hello, I am still testing
     Steps:
       name: "Testing the variables on Wednesday"
-      run: echo "$greeting $first_name code in $cloud"
+      run: echo "$Greeting $First_name code in $cloud"
       env:
-        first_name: Mike
+        First_name: Mike
 
     
