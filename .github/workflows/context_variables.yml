@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Checking Context Variable"
-    run: |
-        echo "Repository Name : ${{ github.repository }}"
-        echo "Workflow Name : ${{ github.workflow }}"
-        echo "Triggered By : ${{ github.triggering_actor }}"
+        run: |
+          echo "Repository Name : ${{ github.repository }}"
+          echo "Workflow Name : ${{ github.workflow }}"
+          echo "Triggered By : ${{ github.triggering_actor }}"
